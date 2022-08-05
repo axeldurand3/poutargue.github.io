@@ -1,0 +1,169 @@
+:root {
+    --text-color: #fff;
+    --text-black: #000;
+    --font-weight: 550;
+    --bg-color: rgb(217, 88, 71);
+    --text-xl: 2.125rem;
+    --blur-size: 5px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-weight: var(--font-weight);
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg-color);
+}
+
+
+/* Font */
+
+@font-face {
+    font-family: Injurial;
+    src: url(../font/Injurial-Regular.eot),
+        url(../font/Injurial-Regular.woff2) format('woff2'),
+        url(../font/Injurial-Regular.woff) format('woff');
+        font-weight: var(--font-weight);
+        font-style: normal;
+}
+
+/* Content */
+
+
+body {
+    font-family: Injurial, 'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+nav,
+#background-video {
+    width: 100vw;
+    height: calc(100 * var(--vh));
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xl);
+    transition: font-size ease .2s;
+    position: fixed;
+    z-index: 999;
+    will-change: contents;
+}
+
+h1,
+h2 {
+    cursor: pointer;
+    -webkit-animation: textAnimation 1.2s ease;
+    animation: textAnimation 1.2s ease;
+}
+
+
+
+@-webkit-keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.9, 0.9);
+    }
+
+    95% {
+        opacity: 1;
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.9, 0.9);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+/* Video */
+
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    transform: scale(1.2, 1.2);
+    transition: opacity 1s ease-out;
+    -webkit-filter: blur(var(--blur-size));
+            filter: blur(var(--blur-size));
+}
+
+.loaded {
+    opacity: 1;
+    
+}
+
+
+/* Typo */
+
+a,
+a:active,
+a:hover,
+a:visited {
+    color: var(--text-color);
+}
+
+h2 {
+    display: none;
+}
+
+/* Bonus */
+
+::-moz-selection {
+    background-color: transparent;
+}
+
+::selection {
+    background-color: transparent;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 767px) {
+	
+    :root {
+        --text-xl: 1.5rem;
+    }
+
+
+}
