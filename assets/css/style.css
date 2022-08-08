@@ -2,9 +2,10 @@
     --text-color: #fff;
     --text-black: #000;
     --font-weight: 550;
-    --bg-color: rgb(217, 88, 71);
+    /*--bg-color: rgb(217, 88, 71);*/
+    --bg-color: #000;
     --text-xl: 2.125rem;
-    --blur-size: 5px;
+    --blur-size: 0px;
 }
 
 * {
@@ -121,7 +122,7 @@ video {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    opacity: 0;
+    opacity: 1;
     transform: scale(1.2, 1.2);
     transition: opacity 1s ease-out;
     -webkit-filter: blur(var(--blur-size));

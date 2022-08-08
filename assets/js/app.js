@@ -28,7 +28,7 @@ appHeight();
 video.addEventListener('canplay', () => {
     setTimeout(() => {
         video.classList.add('loaded')
-        isMobile();
+       // isMobile();
     }, timeout)
 })
 
@@ -45,6 +45,10 @@ function mouseOut() {
     SubText.style.display = "none"
 }
 
+link.addEventListener("mouseover", mouseOver)
+link.addEventListener("mouseout", mouseOut)
+
+/*
 function isMobile() {
 
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
@@ -60,3 +64,5 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
   }
 
 }
+
+*/
