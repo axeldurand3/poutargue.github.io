@@ -5,7 +5,7 @@
     /*--bg-color: rgb(217, 88, 71);*/
     --bg-color: #000;
     --text-xl: 2.125rem;
-    --blur-size: 0px;
+    --blur-size: 5px;
 }
 
 * {
